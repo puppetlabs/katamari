@@ -7,7 +7,7 @@ for the [Packaging](http://github.com/puppetlabs/packaging/) Repo.
 
 The Packaging Repo has accrued a number of tasks over the years, many
 of which have nothing to do with packaging our products. A common work
-flow seems to be "clone hiera, run `rake package:bootstrap`,
+flow seems to be "clone hiera, run `bundle install`,
 and then blahblahblahblah."
 
 ![Unacceptable!](http://permalink-bucket-ba0636a8-281c-4187-b20f-7d602600320b.s3.amazonaws.com/unacceptable-E6153B28-1D47-4069-A322-CB53FF662393.png "Unacceptable!")
@@ -19,22 +19,8 @@ But now you can use Katamari to safely work with the weird, not-quite-packaging 
 ```
 mckern@flexo Repositories $ git clone git@github.com:mckern/katamari.git
 mckern@flexo Repositories $ cd katamari
-mckern@flexo katamari (git:master) $ rake -T
-rake commits            # verify that commit messages match CONTRIBUTING.md requirements
-rake package:bootstrap  # Bootstrap packaging automation, e.g
-rake package:implode    # Remove all cloned packaging automation
-rake rubocop            # run static analysis with rubocop
-mckern@flexo katamari (git:master) $ rake package:bootstrap
-cd ext
-Cloning into 'packaging'...
-remote: Counting objects: 6469, done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 6469 (delta 0), reused 0 (delta 0), pack-reused 6465
-Receiving objects: 100% (6469/6469), 1.69 MiB | 1.31 MiB/s, done.
-Resolving deltas: 100% (3510/3510), done.
-Checking connectivity... done.
-cd -
-mckern@flexo katamari (git:master) $ rake -T
+mckern@flexo Repositories $ bundle install
+mckern@flexo katamari (git:master) $ bundle exec rake -T
 rake clean                                            # Clean all built packages, eg rm -rf pkg
 rake commits                                          # verify that commit messages match CONTRIBUTING.md requirements
 rake package:apple                                    # Task for building an Apple Package

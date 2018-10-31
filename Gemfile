@@ -12,4 +12,4 @@ end
 
 gem 'rake'
 gem 'rubocop', require: false
-gem 'packaging', *location_for(ENV['PACKAGING_LOCATION'] || '~> 0.99.8')
+gem 'packaging', *location_for(ENV['PACKAGING_LOCATION'] || '~> 0.99')
