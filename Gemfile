@@ -11,5 +11,4 @@ def location_for(place)
 end
 
 gem 'rake'
-gem 'rubocop', require: false
 gem 'packaging', *location_for(ENV['PACKAGING_LOCATION'] || '~> 0.99')
