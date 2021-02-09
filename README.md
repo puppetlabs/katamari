@@ -20,7 +20,7 @@ But now you can use Katamari to safely work with the weird, not-quite-packaging 
 mckern@flexo Repositories $ git clone git@github.com:mckern/katamari.git
 mckern@flexo Repositories $ cd katamari
 mckern@flexo Repositories $ bundle install
-mckern@flexo katamari (git:master) $ bundle exec rake -T
+mckern@flexo katamari (git:main) $ bundle exec rake -T
 rake clean                                            # Clean all built packages, eg rm -rf pkg
 rake commits                                          # verify that commit messages match CONTRIBUTING.md requirements
 rake package:apple                                    # Task for building an Apple Package
@@ -86,6 +86,6 @@ rake pl:tickets                                       # Make release tickets in 
 rake pl:uber_ship                                     # UBER ship: ship all the things in pkg
 rake pl:write_build_params                            # Write all package build parameters to a yaml file, pass OUTPUT_DIR to speci...
 rake rubocop                                          # run static analysis with rubocop
-mckern@flexo katamari (git:master) $ 
+mckern@flexo katamari (git:main) $ 
 
 ```
